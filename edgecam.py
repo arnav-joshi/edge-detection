@@ -7,7 +7,7 @@ def on_trackbar(val):
   ret, frame=cap.read()
   img = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
   mint = cv2.getTrackbarPos("min", "Trackbars")
-	maxt = cv2.getTrackbarPos("max", "Trackbars")
+  maxt = cv2.getTrackbarPos("max", "Trackbars")
   edges = cv2.Canny(img,mint,maxt)
   plt.subplot(121),plt.imshow(img,cmap = 'gray')
   plt.title('Original Image'), plt.xticks([]), plt.yticks([])
