@@ -12,7 +12,9 @@ def on_trackbar(val):
   plt.subplot(122),plt.imshow(edges,cmap = 'gray')
   plt.title('Edge Image'), plt.xticks([]), plt.yticks([])
   plt.show()
+  
 cv2.namedWindow("levels")
 cv2.createTrackbar("min", "levels", 0, 500, on_trackbar) 
 cv2.createTrackbar("max", "levels", 0, 500, on_trackbar) 
+
 cv2.waitKey()
